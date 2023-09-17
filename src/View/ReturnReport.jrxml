@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="51ede224-7efe-4160-a3ff-618d65b3cd66">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from returncontainers]]>
+	</queryString>
+	<field name="d_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="reg_no" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cu_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="return_date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="penalty" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="final_price" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="55" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="455" y="0" width="100" height="20" uuid="526c6069-fbcd-4d1e-9b09-0e1d1243f2b5"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="191" y="0" width="175" height="42" uuid="81af06e3-c6f0-4d82-a2a4-591a052bde96"/>
+				<imageExpression><![CDATA["C:\\Users\\DELL\\Downloads\\MVC\\newhit0-removebg-preview.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="191" y="6" width="174" height="20" uuid="c4bd6c84-7343-4195-8c0c-d171711e46a4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Monthly Return Report]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="72" y="0" width="73" height="20" uuid="95503c4f-7fd5-41d9-9a59-034098f1e49f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Regisration No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="163" y="0" width="100" height="20" uuid="9d65a2b0-1d80-4834-a475-981bbb3fcd9f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Customer Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="2" width="100" height="20" uuid="7fffb164-8e77-473d-a8df-c554e0dd85c0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Return Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="2" width="78" height="20" uuid="c4eaf411-8f0c-4b89-8403-eed39dee1acb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Penalty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="483" y="2" width="72" height="20" uuid="d072f7da-17c8-407e-a75c-e6371742eff2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Final Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="2" width="57" height="20" uuid="ba0e3ec0-ed94-44cb-94b4-276644abbf57"/>
+				<textElement>
+					<font size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Deploy_ID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="50" splitType="Stretch">
+			<textField>
+				<reportElement x="72" y="0" width="73" height="20" uuid="a08fb0bd-794f-4930-b6c6-a3d031801ef8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{reg_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="163" y="0" width="100" height="20" uuid="74d0e5ce-1597-43fe-ac9f-20409041d41b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{cu_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="0" width="100" height="20" uuid="f59aba2c-6c0f-4451-bbc3-8791359fe619"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{return_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="394" y="0" width="78" height="20" uuid="727bafcb-1e3f-4ad3-b8c0-6eb9812e67bc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{penalty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="483" y="0" width="72" height="20" uuid="df292998-1d5d-4e0f-92aa-896091d04ba7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{final_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="57" height="20" uuid="4c071eb6-1764-4487-85d3-2fc1f8b17c4c"/>
+				<textFieldExpression><![CDATA[$F{d_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
